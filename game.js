@@ -22,13 +22,11 @@ let remisy = 0;
 const markOption = () => {
     papier.className = kamien.className = nozyczki.className= "";
     const select = event.target;
-    //console.log(event.target.title)
     select.classList.toggle('selected');
     wybor.innerHTML = event.target.title;
     player = event.target.title;
 }
 const letsPlay = () => {
-    //console.log(wybor.innerHTML)
         if(player === ''){
             alert("Wybierz Przycisk !");
         }
@@ -76,15 +74,9 @@ const letsPlay = () => {
             losses.innerHTML = ++yourWon;
         }
         else {
-            whoWin.style.color ="black"
+            whoWin.style.color ="black";
         }
-        console.log(whoWin.style)
-        
-        
-        //console.log(document.querySelector('Przegrales'))
-        //document.querySelector('Przegrales')[0].style.color = "red";
-
-    
+        papier.className = kamien.className = nozyczki.className= "";
 }
 
 papier.addEventListener("click", markOption);
